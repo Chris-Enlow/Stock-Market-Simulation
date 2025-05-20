@@ -4,6 +4,7 @@ import matplotlib.pyplot as plt
 class Stock:
 
     def __init__(self, name):
+        self.price = 0
         self.name = name
         self.xPOIs = []
         self.yPOIs = []
@@ -30,5 +31,5 @@ class Stock:
         if (currentPrice < decrement):
             decrement = currentPrice
         num = random.randint(currentPrice - decrement, currentPrice + increment)
-        print(num)
+        self.price = num
         self.addPOI(day, num)
